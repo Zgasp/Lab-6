@@ -28,15 +28,22 @@
 </head>
 <body>
 	<h1 class="center">ITMD-361 - Lab 7 - Basic JavaScript Event Handling and DOM</h1>
-	<h2 class="center">Your Name Here</h2>
-	<h3 class="center">Your IIT email here</h3>
+	<h2 class="center">Zachary Gasparetti</h2>
+	<h3 class="center">zgasparetti@hawk.iit.edu</h3>
 	<div id="container">
 		<input id="entryinput" type="text" name="textentry" placeholder="Enter a Message">
 		<div id="entrybutton">Alert Me</div>
 		<h2 id="textoutput" class="center">Show results here</h2>
 	</div>
 	<script type="text/javascript">
-		
+		var event = document.getElementById("entrybutton");
+      event.addEventListener("click", alert_function);
+
+      function alert_function(){
+        var user_input = document.getElementById("entryinput").value;
+        alert("Zachary Gasparetti: " + user_input);
+		document.getElementById("textoutput").innerHTML = input;
+      }//End alert_function
 	</script>
 </body>
 </html>
